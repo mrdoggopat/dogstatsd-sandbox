@@ -352,6 +352,17 @@ DogStatsD
   Unterminated Metric Errors: 0
 ```
 
+In the agent.log, these logs are indication that Dogstatsd is working as intended:
+
+```
+# UDP
+2023-03-03 14:30:37 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:95 in Listen) | dogstatsd-udp: starting to listen on [::]:8125
+
+# UDS
+2023-03-03 14:30:37 UTC | CORE | INFO | (pkg/dogstatsd/listeners/uds_common.go:146 in Listen) | dogstatsd-uds: starting to listen on /var/run/datadog/dsd.socket
+
+```
+
 It is still recommended to verify the customer which protocol they are using. You can also check their `envvars.log` in their flare for the following environment variables:
 
 ```
