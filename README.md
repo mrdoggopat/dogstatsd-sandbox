@@ -30,7 +30,7 @@ If it worked, you should see a (venv) note before your terminal. This will keep 
 
 Technically there is an easier approach with this since we do not require a lot of dependencies since we are using very simple python scripts but as a newbie that I am with Python, I'll stick using `venv` as I am taking a page out of Steven Wenzels APM Containers sandbox :P
 
-<h1>Dogstatsd with UDP (User Datagram Protocol</h1>
+<h1>Dogstatsd with UDP (User Datagram Protocol)</h1>
 
 <h3>Step 1: Build the app</h3>
 
