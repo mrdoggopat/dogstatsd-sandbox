@@ -4,9 +4,7 @@ This sandbox goes over how to submit your own custom metrics via Dogstatsd in yo
 
 <h1>Prerequisites</h1>
 
-A personal Kubernetes cluster. I’d recommend using either Minikube:
-
-Minikube and Docker Desktop, preferred if already ran `minikube start`.
+Minikube and Docker Desktop, preferred if you've already ran `minikube start`.
 
 Kubectl, the Kubernetes command line tool. You can install it with homebrew.
 
