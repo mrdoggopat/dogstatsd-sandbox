@@ -83,6 +83,8 @@ eval $(minikube docker-env)
 
 That way we do not need to go through the trouble of pushing the image to the Docker registry (up to you if you want to do that instead).
 
+Note: This eval command is with respect to your current terminal session/tab. If you are using multiple tabs or close out this tab, your terminal session default to your normal Docker image cache instead of Minikube’s Docker image cache.
+
 Then run:
 
 ```
@@ -90,8 +92,6 @@ docker build -t <your_image_name> .
 ```
 
 This will build an image with the name `<your_image_name>:latest`.
-
-Note: This eval command is with respect to your current terminal session/tab. If you are using multiple tabs or close out this tab, your terminal session default to your normal Docker image cache instead of Minikube’s Docker image cache.
 
 <h3>Step 3: Kubernetes time :D</h3>
 
