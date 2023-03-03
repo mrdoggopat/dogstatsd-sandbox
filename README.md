@@ -12,6 +12,24 @@ Kubectl, the Kubernetes command line tool. You can install it with homebrew.
 
 Helm set up and preferably the Datadog agent pods deployed.
 
+Python3, with `venv`.
+
+Navigate to a directory of your choice (I’d recommend an empty folder for this project), and set up your Python virtual environment with this command:
+
+```
+python3 -m venv ./venv
+```
+
+This creates a virtual environment in the /venv folder of your directory. A virtual environment is important for keeping your global Python installation clean. Once you’ve made it, enter the virtual environment with:
+
+```
+source ./venv/bin/activate
+```
+
+If it worked, you should see a (venv) note before your terminal. This will keep our pip dependencies clean when we generate them.
+
+Technically there is an easier approach with this since we do not require a lot of dependencies since we are using very simple python scripts but as a newbie that I am with Python, I'll stick to this as I am taking a page out of Steven Wenzels APM Containers sandbox :P
+
 <h1>Dogstatsd with UDP (User Datagram Protocol</h1>
 
 <h3>Step 1: Build the app</h3>
