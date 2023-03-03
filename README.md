@@ -352,7 +352,7 @@ DogStatsD
   Unterminated Metric Errors: 0
 ```
 
-In the agent.log, these logs are indication that Dogstatsd is working as intended:
+In the agent.log, these logs are indication that Dogstatsd is working as intended, but even if the customer is using only UDP or UDS these two logs may show since the later Helm chart versions tends to have both enabled by default without any configuration on the customer's end:
 
 ```
 # UDP
