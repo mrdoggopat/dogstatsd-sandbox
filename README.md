@@ -28,7 +28,7 @@ source ./venv/bin/activate
 
 If it worked, you should see a (venv) note before your terminal. This will keep our pip dependencies clean when we generate them.
 
-Technically there is an easier approach with this since we do not require a lot of dependencies since we are using very simple python scripts but as a newbie that I am with Python, I'll stick using `venv` as I am taking a page out of Steven Wenzels APM Containers sandbox :P
+Technically there is an easier approach with this since we do not require a lot of dependencies since we are using very simple python scripts but as a newbie that I am with Python, I'll stick using `venv` as I am taking a page out of Steven Wenzels APM Kubernetes sandbox :P
 
 <h1>Dogstatsd with UDP (User Datagram Protocol)</h1>
 
