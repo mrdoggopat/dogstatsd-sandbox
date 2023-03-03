@@ -6,7 +6,7 @@ This sandbox goes over how to submit your own custom metrics via Dogstatsd in yo
 
 Minikube and Docker Desktop, preferred if you've already ran `minikube start`.
 
-Kubectl, the Kubernetes command line tool. You can install it with homebrew.
+`kubectl`, the Kubernetes command line tool. You can install it via Homebrew with `brew install kubectl` on your Macbook.
 
 Helm set up and preferably the Datadog agent pods deployed.
 
