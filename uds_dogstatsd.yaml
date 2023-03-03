@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: patsudsdogstatsd
+spec:
+  hostNetwork: true
+  containers:
+  - name: patsudsdogstatsd
+    image: patsudsdogstatsd:latest
+    imagePullPolicy: IfNotPresent
+    env:
+      - name: DD_ENTITY_ID
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.uid
+    volumeMounts:
+    - name: dsdsocket
+      mountPath: /var/run/datadog
+      readOnly: true
+  volumes:
+    - hostPath:
+          path: /var/run/datadog/
+      name: dsdsocket

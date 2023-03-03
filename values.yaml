@@ -1,0 +1,18 @@
+datadog:
+  clusterName: "pattydogstatsd"
+  kubelet:
+    tlsVerify: false
+
+  dogstatsd:
+    #UDP
+    port: 8125
+    useHostPort: true
+    nonLocalTraffic: true
+    
+    #UDS
+    originDetection: true
+    tagCardinality: low
+    useSocketVolume: true
+    socketPath: /var/run/datadog/dsd.socket
+    hostSocketPath: /var/run/datadog/
+    useHostPID: true
