@@ -43,7 +43,7 @@ Make sure you install the Dogstatsd client using this command:
 pip install datadog
 ```
 
-This is a very simple python app that submits metrics via Dogstatsd via UDP:
+This is a very simple python app that submits metrics indefinitely using a while loop via Dogstatsd via UDP:
 ```
 from datadog import initialize, statsd
 import time
@@ -194,7 +194,8 @@ Make sure you install the Dogstatsd client using this command:
 pip install datadog
 ```
 
-This is a very simple python app that submits metrics via Dogstatsd via UDS:
+This is a very simple python app that submits metrics indefinitely using a while loop via Dogstatsd via UDP:
+
 ```
 from datadog import initialize, statsd
 import time
