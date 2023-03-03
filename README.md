@@ -8,7 +8,7 @@ Minikube and Docker Desktop, preferred if you've already ran `minikube start`.
 
 `kubectl`, the Kubernetes command line tool. You can install it via Homebrew with `brew install kubectl` on your Macbook.
 
-Helm set up and preferably the Datadog agent pods deployed.
+Helm installed (`brew install helm` on your Macbook) and set up and preferably the Datadog agent pods deployed.
 
 Python3, with `venv`.
 
