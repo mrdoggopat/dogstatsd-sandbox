@@ -374,9 +374,10 @@ In the agent.log, these logs are indication that Dogstatsd is working as intende
 ```
 # UDP
 2023-03-03 14:30:37 UTC | CORE | INFO | (pkg/dogstatsd/listeners/udp.go:95 in Listen) | dogstatsd-udp: starting to listen on [::]:8125
-
+2023-03-11 18:45:07 UTC | CORE | DEBUG | (pkg/dogstatsd/listeners/udp.go:88 in NewUDPListener) | dogstatsd-udp: [::]:8125 successfully initialized
 # UDS
 2023-03-03 14:30:37 UTC | CORE | INFO | (pkg/dogstatsd/listeners/uds_common.go:146 in Listen) | dogstatsd-uds: starting to listen on /var/run/datadog/dsd.socket
+2023-03-11 18:45:07 UTC | CORE | DEBUG | (pkg/dogstatsd/listeners/uds_common.go:138 in NewUDSListener) | dogstatsd-uds: /var/run/datadog/dsd.socket successfully initialized
 ```
 
 It is still recommended to verify the customer which protocol they are using. You can also check their `envvars.log` in their flare for the following environment variables:
