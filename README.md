@@ -388,7 +388,7 @@ DD_DOGSTATSD_NON_LOCAL_TRAFFIC
 
 #For UDS:
 DD_DOGSTATSD_SOCKET
-DD_DOGSTATSD_ORIGIN_DETECTION #not required to have UDS working, could be useful for cases where customers are missing certain tags
+DD_DOGSTATSD_ORIGIN_DETECTION #not required to have UDS working, could be useful for cases where customers are raising origin detection issues
 DD_DOGSTATSD_TAG_CARDINALITY #not required to have UDS working, could be useful for cases where customers are missing certain tags
 ```
 
