@@ -13,3 +13,8 @@ spec:
       valueFrom:
           fieldRef:
               fieldPath: status.hostIP
+    # uncomment if you're looking to set origin detection via UDP
+    # - name: DD_ENTITY_ID
+    #   valueFrom:
+    #     fieldRef:
+    #       fieldPath: metadata.uid

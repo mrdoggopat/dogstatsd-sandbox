@@ -135,6 +135,11 @@ spec:
       valueFrom:
           fieldRef:
               fieldPath: status.hostIP
+    # uncomment if you're looking to set origin detection via UDP
+    # - name: DD_ENTITY_ID
+    #   valueFrom:
+    #     fieldRef:
+    #       fieldPath: metadata.uid
 ```
 
 After that run the following to deploy the pod:
@@ -273,11 +278,6 @@ spec:
   - name: myudsdogstatsd
     image: <your_image_name>:latest
     imagePullPolicy: IfNotPresent
-    env:
-      - name: DD_ENTITY_ID
-        valueFrom:
-          fieldRef:
-            fieldPath: metadata.uid
     volumeMounts:
     - name: dsdsocket
       mountPath: /var/run/datadog
@@ -406,7 +406,7 @@ volumes:
       name: dsdsocket
 ```
 
-Make sure these paths match in the agent container as well as their application pod/deployment manifest.
+Make sure these paths match in the agent container as well as their application pod/deployment manifest. Note that the socket path does not need to be `var/run/datadog/dsd.socket` and can be for example `var/run/datadog-agent/dsd.socket` as long as it matches the path in the application code, manifest and the volumes/volume mounts.
 
 Some dogstatsd metrics that can be useful for troubleshooting: https://docs.datadoghq.com/developers/dogstatsd/high_throughput/#client-side-telemetry
 

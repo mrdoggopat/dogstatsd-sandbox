@@ -8,11 +8,6 @@ spec:
   - name: patsudsdogstatsd
     image: patsudsdogstatsd:latest
     imagePullPolicy: IfNotPresent
-    env:
-      - name: DD_ENTITY_ID
-        valueFrom:
-          fieldRef:
-            fieldPath: metadata.uid
     volumeMounts:
     - name: dsdsocket
       mountPath: /var/run/datadog
